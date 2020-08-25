@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  //- h1= title
+  h1 Welcome to #{title}
+
+  p Total Schools : #{totalSchools}
+
+  p Schools by State: #{schoolByState}
+
+  p Schools by Metro-centric locale: #{schoolByMetro}
+
+  p City with most schools: #{cityMostSchool}
+
+  p Unique cities with at least one school: #{uniqueCities}
+
+  h2 Search Results: 
+  
+  ul
+  for item in searchResults
+    li= item.schoolName +" "+ item.city +" "+ item.state
